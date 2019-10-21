@@ -12,4 +12,10 @@ describe Account do
       expect{account.deposit(10)}.to change{account.balance}.from(0).to(10)
     end
   end
+
+  describe '#withdrawal' do
+    it 'decreases the balance by the amount deposited' do
+      expect{account.withdrawal(5)}.to change{account.balance}.from(10).to(5)
+    end
+  end
 end
