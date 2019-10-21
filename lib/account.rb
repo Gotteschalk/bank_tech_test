@@ -9,11 +9,11 @@ attr_reader :balance, :transaction_history
 
   def deposit(amount)
     @balance += amount
-    @transaction_history.push(["+",amount,@balance])
+    @transaction_history.push([Time.now.strftime("%x"),"+",amount,@balance])
   end
 
   def withdraw(amount)
     @balance -= amount
-    @transaction_history.push(["-",amount,@balance])
+    @transaction_history.push([Time.now.strftime("%x"),"-",amount,@balance])
   end
 end
