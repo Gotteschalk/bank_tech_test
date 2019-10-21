@@ -9,6 +9,7 @@ attr_reader :balance, :transaction_history
 
   def deposit(amount)
     @balance += amount
+    @transaction_history.push(amount, @balance)
   end
 
   def withdraw(amount)

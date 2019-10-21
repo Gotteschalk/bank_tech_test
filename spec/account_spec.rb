@@ -15,6 +15,10 @@ describe Account do
     it 'increases the balance by the amount deposited' do
       expect{account.deposit(10)}.to change{account.balance}.from(0).to(10)
     end
+
+    it 'records the value of the deposit and the balance in the account transaction history' do
+      expect(account.transaction_history).to eq([10, 10])
+    end
   end
 
   describe '#withdraw' do
