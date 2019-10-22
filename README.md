@@ -22,9 +22,9 @@ my_account.deposit(5)
 my_account.withdraw(3)
 my_account.print_statement
 
-"date || credit || debit || balance\n
-21/10/2019 || || 3.00 || 12.00\n
-21/10/2019 || 5.00 || || 15.00\n
+"date || credit || debit || balance
+21/10/2019 || || 3.00 || 12.00
+21/10/2019 || 5.00 || || 15.00
 21/10/2019 || 10.00 || || 10.00"
 ```
 
